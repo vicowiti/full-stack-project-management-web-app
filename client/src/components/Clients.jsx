@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import ClientRow from "./ClientRow";
 import { GET_CLIENTS } from "../queries/clientQueries";
 import Spinnerr from "./Spinner";
+import NewClientModal from "./NewClientModal";
 
 const Clients = () => {
   const { loading, error, data } = useQuery(GET_CLIENTS);

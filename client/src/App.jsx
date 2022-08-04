@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./components/Navbar";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import Clients from "./components/Clients";
+import NewClientModal from "./components/NewClientModal";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -33,6 +34,7 @@ const App = () => {
       <ApolloProvider client={client}>
         <NavBar />
         <div className="container">
+          <NewClientModal />
           <Clients />
         </div>
       </ApolloProvider>
