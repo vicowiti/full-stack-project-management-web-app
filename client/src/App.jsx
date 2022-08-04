@@ -3,6 +3,8 @@ import NavBar from "./components/Navbar";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import Clients from "./components/Clients";
 import NewClientModal from "./components/NewClientModal";
+import Projects from "./components/Projects";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -32,11 +34,14 @@ const App = () => {
   return (
     <>
       <ApolloProvider client={client}>
-        <NavBar />
-        <div className="container">
-          <NewClientModal />
-          <Clients />
-        </div>
+        <BrowserRouter>
+          <NavBar />
+          <div className="container">
+            <NewClientModal />
+            <Projects />
+            <Clients />
+          </div>
+        </BrowserRouter>
       </ApolloProvider>
     </>
   );
