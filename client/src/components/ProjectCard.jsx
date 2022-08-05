@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   let bgColor;
@@ -16,7 +17,9 @@ const ProjectCard = ({ project }) => {
     <Card className="col-md-3 m-2 ">
       <Card.Header className="d-flex justify-content-between">
         <h3>{project.name}</h3>
-        <button className="btn btn-light">View</button>
+        <Link to={`/project/${project.id}`}>
+          <button className="btn btn-light">View</button>
+        </Link>
       </Card.Header>
       <Card.Body className="d-flex gap-2">
         <h6>Status: {project.status}</h6>

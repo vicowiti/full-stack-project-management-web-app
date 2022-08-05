@@ -7,7 +7,7 @@ const NavBar = () => {
     <>
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               alt="logo"
               src={Logo}

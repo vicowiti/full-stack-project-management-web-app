@@ -5,6 +5,7 @@ import ClientRow from "./ClientRow";
 import { GET_CLIENTS } from "../queries/clientQueries";
 import Spinnerr from "./Spinner";
 import NewClientModal from "./NewClientModal";
+import NewProjectModal from "./NewProjectModal";
 
 const Clients = () => {
   const { loading, error, data } = useQuery(GET_CLIENTS);
@@ -17,6 +18,7 @@ const Clients = () => {
     return (
       <div>
         <h1>Clients</h1>
+
         <table className="table table-hover mt-3">
           <thead>
             <tr>

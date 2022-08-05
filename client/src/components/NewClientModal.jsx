@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { FaPlus, FaUser } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
